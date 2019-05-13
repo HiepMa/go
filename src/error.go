@@ -34,7 +34,7 @@ func run(x bool) error{
 	}
 }
 
-func main() {
-	fmt.Println(sqrt(2))
-	fmt.Println(sqrt(-2))
-}
+//func main() {
+//	fmt.Println(sqrt(2))
+//	fmt.Println(sqrt(-2))
+//}
