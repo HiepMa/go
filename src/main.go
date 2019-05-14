@@ -2,6 +2,8 @@ package main
 
 import (
 	"./channel"
+	"./rangeandclose"
+	"./select"
 	"fmt"
 )
 
@@ -26,4 +28,15 @@ func main(){
 	ch <- 2
 	fmt.Println(<-ch)
 	fmt.Println(<-ch)
+
+	//range and close
+	d := make(chan int, 10)
+	go rangeandclose.Fibonacci(cap(d), d)
+	for i := range d {
+		fmt.Println(i)
+	}
+
+	//select
+	_select.Main()
+	_select.Clock()
 }
